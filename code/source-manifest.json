@@ -1,0 +1,130 @@
+{
+  "description": "Original copy hashes. Notebooks and shared helpers are preserved byte-for-byte; documented script edits may differ.",
+  "files": [
+    {
+      "source": "fwm-paper/code/The canonical coordinates of FWM.ipynb",
+      "destination": "code/The canonical coordinates of FWM.ipynb",
+      "sha256": "b1cec65642280501f7e84d70af7f36e454076fcd338b657eac8c12ba3e8fb186"
+    },
+    {
+      "source": "fwm-paper/code/audit_initial.py",
+      "destination": "code/audit_initial.py",
+      "sha256": "19923e27e74212da91c2e624f63141f51eb81e8611d946db09a6d7e19c2a82aa"
+    },
+    {
+      "source": "fwm-paper/code/requirements.txt",
+      "destination": "code/requirements.txt",
+      "sha256": "6f804fa689a7237ad12685f752464a9d1dc2d3d24adca061a479eaab9b8ec432"
+    },
+    {
+      "source": "fwm-paper/code/__init__.py",
+      "destination": "code/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fwm-paper/code/Numeric plots for four-wave mixing.ipynb",
+      "destination": "code/Numeric plots for four-wave mixing.ipynb",
+      "sha256": "5d81049cf3f3542392b49cdbdb62ac8eb676934e58ea65ecae532f6227aac5fb"
+    },
+    {
+      "source": "fwm-paper/code/wpk.py",
+      "destination": "code/wpk.py",
+      "sha256": "0f545b79ced71711e34d1161748112c083592e0aa87b8fd7fd8394222b3a3c19"
+    },
+    {
+      "source": "fwm-paper/code/weierstrass_modified.py",
+      "destination": "code/weierstrass_modified.py",
+      "sha256": "cd1e1c295c0f8fa6fc6c0e2c09835fe0f651f42ed718b2cd242ca765aadbbc7d"
+    },
+    {
+      "source": "fwm-paper/code/audit_numeric_notebook.py",
+      "destination": "code/audit_numeric_notebook.py",
+      "sha256": "9511b6a14b4a68e5f84ba3ef938472be0b68a947e4a1766b1c3ccf2b33fcf3ab"
+    },
+    {
+      "source": "fwm-paper/code/audit_cubic.py",
+      "destination": "code/audit_cubic.py",
+      "sha256": "ec27abc64f2ff80b1ef855d45829477ceec18bb496f8ef6ccf4d2ebf06859f93"
+    },
+    {
+      "source": "fwm-paper/code/audit_final.py",
+      "destination": "code/audit_final.py",
+      "sha256": "bec22840606c82868feee395dcb35af00cd2ae743d763c0f51717ee4da8acaf6"
+    },
+    {
+      "source": "fwm-paper/code/Four Wave Mixing Case.ipynb",
+      "destination": "code/Four Wave Mixing Case.ipynb",
+      "sha256": "1bc844c8a8517b28735fb07249a4414c672620c226de8dc7f025afe47934efd8"
+    },
+    {
+      "source": "coherent-coupler-paper/code/The projection from degenerate FWM to the coherent coupler.ipynb",
+      "destination": "code/The projection from degenerate FWM to the coherent coupler.ipynb",
+      "sha256": "3ce09e14864eb934046774a01f1337a8140feebed48b7edcd38ea6e0617c1bdc"
+    },
+    {
+      "source": "coherent-coupler-paper/code/audit_coupler.py",
+      "destination": "code/audit_coupler.py",
+      "sha256": "5e86a72e6788c81336f21e2c39a61c588063b3aad1d1f14ded2c593702871344"
+    },
+    {
+      "source": "coherent-coupler-paper/code/asymmetric_physical_example.py",
+      "destination": "code/asymmetric_physical_example.py",
+      "sha256": "b7ff2df7b757a2c7b9d1049bef05bf4efb51c3872170437869b65a6b7536413d"
+    },
+    {
+      "source": "coherent-coupler-paper/code/The connection between a 2-mode coupler and a polarisation system.ipynb",
+      "destination": "code/The connection between a 2-mode coupler and a polarisation system.ipynb",
+      "sha256": "30cf117d647b2215cfb9f413e693a7e417a0183cbcc232206c8a2581205c8a6c"
+    },
+    {
+      "source": "coherent-coupler-paper/code/requirements.txt",
+      "destination": "code/requirements.txt",
+      "sha256": "6f804fa689a7237ad12685f752464a9d1dc2d3d24adca061a479eaab9b8ec432"
+    },
+    {
+      "source": "coherent-coupler-paper/code/The connection between a 2-mode coupler and a 2-mode multimode system.ipynb",
+      "destination": "code/The connection between a 2-mode coupler and a 2-mode multimode system.ipynb",
+      "sha256": "13fec2a95a5f308a3bdc76662146d9f751d3a0901b22e4a2c8930ff8e32a3b4f"
+    },
+    {
+      "source": "coherent-coupler-paper/code/__init__.py",
+      "destination": "code/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "coherent-coupler-paper/code/Degenerate FWM to coherent coupler transform check.ipynb",
+      "destination": "code/Degenerate FWM to coherent coupler transform check.ipynb",
+      "sha256": "7177c507f7e78f07c230e8822db914e31ab21c06ccffa73d29c90b3ff91bff0b"
+    },
+    {
+      "source": "coherent-coupler-paper/code/The general 2 mode case of the coherent coupler.ipynb",
+      "destination": "code/The general 2 mode case of the coherent coupler.ipynb",
+      "sha256": "77232b3dc0057e37e36ff8bf5d84dc3afe3429def22b441c011c551fa281de9e"
+    },
+    {
+      "source": "coherent-coupler-paper/code/wpk.py",
+      "destination": "code/wpk.py",
+      "sha256": "0f545b79ced71711e34d1161748112c083592e0aa87b8fd7fd8394222b3a3c19"
+    },
+    {
+      "source": "coherent-coupler-paper/code/weierstrass_modified.py",
+      "destination": "code/weierstrass_modified.py",
+      "sha256": "cd1e1c295c0f8fa6fc6c0e2c09835fe0f651f42ed718b2cd242ca765aadbbc7d"
+    },
+    {
+      "source": "coherent-coupler-paper/code/Numeric plots for the coherent coupler.ipynb",
+      "destination": "code/Numeric plots for the coherent coupler.ipynb",
+      "sha256": "743b4c6d3ec7980e99ace723c858ecea48bb19cf299fcd4bd8a42cfc4cd96678"
+    },
+    {
+      "source": "coherent-coupler-paper/code/The Coherent Coupler system of Jensen.ipynb",
+      "destination": "code/The Coherent Coupler system of Jensen.ipynb",
+      "sha256": "7f391c39f4c78b1eb35420b90b4cd5c01c644850233020a7db7da07c607c6537"
+    },
+    {
+      "source": "fwm-paper/notes/Mobius transforms and invariance.ipynb",
+      "destination": "code/Mobius transforms and invariance.ipynb",
+      "sha256": "2f68cc896601db68bd4946c563df2b01940fd595cb425e3ab29d68edd1cc0741"
+    }
+  ]
+}
