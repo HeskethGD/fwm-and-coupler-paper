@@ -9,7 +9,8 @@
 \usepackage{lineno}
 \linenumbers
 \numberwithin{equation}{section}
-\externaldocument[S-]{supplement}
+\input{supplement-references.tex}
+\newcommand{\externaleqref}[1]{\textup{(\ref*{#1})}}
 \begin{document}
 \title{Elliptic complex-envelope solutions and normal forms for four-wave mixing and coherent couplers}
 \author{Graham Hesketh\authormark{*}}
@@ -58,7 +59,7 @@ We reconstruct the complex FWM envelopes from the conservation laws to expose th
 
 \subsection{Model and conservation laws}\label{sec:fwm-model}
 We consider the scalar continuous-wave fibre model with pump depletion, self-phase and cross-phase modulation, and phase mismatch $\Delta k=-\beta_1-\beta_2+\beta_3+\beta_4$ \cite{agrawalNonlinearFiberOptics2019,stolenParametricAmplificationFrequency1982}.
-The physical equations, overlap assumptions and explicit field normalisation are given in Supplement~1, Section~\ref{S-supp:sec:physical}.
+The physical equations, overlap assumptions and explicit field normalisation are given in Supplement~1, Section~\ref*{S-supp:sec:physical}.
 With independent complex Hamiltonian variables $u_j,v_j$, they lead to the system
 \begin{align}
 \frac{d}{d z} u_j{\left(z \right)} &= - \left({a}_{j} + \sum_{k=1}^{4} {a}_{j,k}\,u_k v_k \right) u_j + \prod\limits_{k=1, k \ne j}^{4} v_k, \notag \\
@@ -72,7 +73,7 @@ u_jv_j=-is_j\frac{T^2}{\omega_j}|A_j|^2,
 \qquad s_1=s_2=1,\quad s_3=s_4=-1.
 \label{eq:physical-real-slice}
 \end{equation}
-where $T$ is the normalisation scale in \eqref{S-eq:T-def}.
+where $T$ is the normalisation scale in \externaleqref{S-eq:T-def}.
 The modal products are therefore scaled, purely imaginary optical powers on this slice.
 For physical coefficients, $\sum_j a_j=i\Delta k$.
 The canonical Hamiltonian is
@@ -103,7 +104,7 @@ u_j(z) v_j(z) - u_k(z) v_k(z) = \gamma_j - \gamma_k.
 
 Choose $\sum_j\gamma_j=0$, so $\rho$ is minus the mean modal product.
 With $C_j=u_jv_j-u_4v_4$ for $j=1,2,3$, the quantities $H,C_1,C_2,C_3$ are generically independent and in involution; the complexified system is holomorphically Liouville integrable \cite{arnoldMathematicalMethodsClassical1989}.
-The independence argument and parameter/initial-data definitions are given in Supplement~1, Sections~\ref{S-supp:sec:elliptic-data}, \ref{S-app:param-def-appendix} and \ref{S-app:init-conds}.
+The independence argument and parameter/initial-data definitions are given in Supplement~1, Sections~\ref*{S-supp:sec:elliptic-data}, \ref*{S-app:param-def-appendix} and \ref*{S-app:init-conds}.
 
 \subsection{Elliptic modal powers}\label{sec:mode-power}
 The Hamiltonian supplies the sum of the two interaction products, while \eqref{eq:duv_j} supplies their difference.
@@ -133,7 +134,7 @@ where $w(z)=\wp(z-z_0;g_2,g_3)$.
 Fixing initial data still requires inversion of $\wp$; specifying both $\wp$ and $\wp'$ fixes the sheet, modulo the period lattice.
 The points $z_0\pm z_1$ are the poles of $\rho$, and $\mu_j$ is selected by $\rho(\mu_j)=\gamma_j$, $\rho'(\mu_j)=Q(\gamma_j)$, so that $v_j$ vanishes there and $u_j$ vanishes at $2z_0-\mu_j$.
 The sign of $\sqrt{d_4}$ fixes the $z_1$ convention.
-Explicit signed-point data are given in \eqref{S-eq:wp-points} of Supplement~1.
+Explicit signed-point data are given in \externaleqref{S-eq:wp-points} of Supplement~1.
 The modal powers follow as
 \begin{align}
 u_j{\left(z\right)} v_j{\left(z\right)} &= \rho(\mu_j) - \rho(z) \notag \\
@@ -161,7 +162,7 @@ Substitute the elliptic powers into these logarithmic derivatives and use
 \qquad \zeta(x)=\frac{d}{dx}\log\sigma(x).
 \end{equation}
 The result is a sum of zeta functions, whose integration gives sigma ratios and elementary exponential factors.
-The expanded derivatives are recorded in Supplement~1, Section~\ref{S-supp:sec:elliptic-data}.
+The expanded derivatives are recorded in Supplement~1, Section~\ref*{S-supp:sec:elliptic-data}.
 Performing the integration and taking exponentials gives the first main result of this paper, the complete analytic solutions for the complex mode envelopes $u_j,v_j$ of continuous-wave four-wave mixing, without decomposition into amplitude and phase:
 \begin{align}
 u_j{\left(z\right)} &= \frac{\alpha_j\,\sqrt{W_j} \,\sigma{\left(z - 2 z_{0} + {\mu}_{j} \right)} \exp\left(z {r}_{0,j} + \log{\left(\frac{\sigma{\left(z - z_{0} + z_{1} \right)}}{\sigma{\left(z - z_{0} - z_{1} \right)}} \right)} {r}_{1,j}\right)}{\sqrt{\wp{\left(z_{1} \right)} - \wp{\left(z - z_{0} \right)}} \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0} \right)}}, \notag \\[12pt]
@@ -181,7 +182,7 @@ The definitions also give $\sum_j\Lambda_{1,j}=\sum_jr_{1,j}=0$, so the logarith
 % ---------- SECTION -------------
 % --------------------------------
 
-The Hamiltonian product relation has a four-point Frobenius--Stickelberger determinant representation, derived in Supplement~1, Section~\ref{S-supp:sec:fs-proof} \cite{whittakerCourseModernAnalysis2021,frobeniusZurTheorieElliptischen1877}.
+The Hamiltonian product relation has a four-point Frobenius--Stickelberger determinant representation, derived in Supplement~1, Section~\ref*{S-supp:sec:fs-proof} \cite{whittakerCourseModernAnalysis2021,frobeniusZurTheorieElliptischen1877}.
 
 \subsection{Zeros, poles and branching}\label{sec:cubic-case}
 For generic noncoincident arguments, the quartic envelope $u_j$ has local exponents $r_{1,j}-1/2$ and $-r_{1,j}-1/2$ at $z_0-z_1$ and $z_0+z_1$, respectively; those of $v_j$ are interchanged.
@@ -192,7 +193,7 @@ u_j(z)\propto e^{zr_{0,j}}\sigma(x+\nu_j)
 \end{equation}
 Noninteger exponents yield branch points, with compatible local branches required.
 The distinct coefficient regime $d_4=b_2^2-4=0$, $d_3\ne0$, has cubic modal powers, but generically essential-singular envelopes because their reconstruction contains $\exp[-4\Lambda_{1,j}\zeta(z-z_0+z_1)/d_3]$.
-The complete cubic formulas are given in Supplement~1, Section~\ref{S-supp:sec:cubic}.
+The complete cubic formulas are given in Supplement~1, Section~\ref*{S-supp:sec:cubic}.
 The FWM normal form in Section~\ref{sec:coord-transforms} belongs to the meromorphic subclass $d_4=0$, $\Lambda_{1,j}=0$, whose envelopes have the sigma-ratio structure identified in Section~\ref{sec:elliptic-structure}.
 
 \subsection{Baker--Akhiezer structure of the envelopes}\label{sec:elliptic-structure}
@@ -236,7 +237,7 @@ The denominator $\sqrt{\wp(z_1)-\wp(z-z_0)}$ in \eqref{eq:u-v-quartic} suggests 
 
 \subsection{Gauge and local normalisation}\label{subsec:bar-coords}
 Set $u_j=\hat u_j e^{-\phi_j}$, $v_j=\hat v_j e^{\phi_j}$ with $\sum_j\phi_j=0$.
-The phases specified in Supplement~1, Section~\ref{S-supp:sec:normalisation}, preserve all modal products, remove the mode-dependent logarithmic factors and give
+The phases specified in Supplement~1, Section~\ref*{S-supp:sec:normalisation}, preserve all modal products, remove the mode-dependent logarithmic factors and give
 \begin{align}
 \frac{\mathrm{d}}{\mathrm{d}z} \hat{u}_j &= \left(b_1 - 2b_2\hat{u}_j \hat{v}_j \right) \frac{\hat{u}_j}{4} + \prod\limits_{k=1, k \ne j}^{4} \hat{v}_k \notag \\
 \frac{\mathrm{d}}{\mathrm{d}z} \hat{v}_j &= -\left(b_1 - 2b_2\hat{u}_j \hat{v}_j\right) \frac{\hat{v}_j}{4} - \prod\limits_{k=1, k \ne j}^{4} \hat{u}_k \label{eq:uv-hat-system}
@@ -266,7 +267,7 @@ where the constants needed to evaluate the map are
 \qquad \sum_{j=1}^4\theta_j=0.
 \label{eq:normalisation-constants}
 \end{align}
-The constant roots are chosen compatibly as specified in Section~\ref{subsec:transform-domain}; further barred-coordinate data are in Supplement~1, Section~\ref{S-app:bar-coords-params}.
+The constant roots are chosen compatibly as specified in Section~\ref{subsec:transform-domain}; further barred-coordinate data are in Supplement~1, Section~\ref*{S-app:bar-coords-params}.
 It yields the full barred mode equations
 \begin{align}
 \frac{\mathrm{d}}{\mathrm{d}z} \bar{u}_j &= -\left(\frac{1}{\chi} - \frac{\chi}{4}\bar{u}_j \bar{v}_j \right) \bar{u}_j - \frac{\varsigma \chi}{4} \prod\limits_{k=1, k \ne j}^{4} \bar{v}_k, \notag \\
@@ -358,9 +359,9 @@ and the sigma and Baker--Akhiezer forms of the solutions are:
 \end{align}
 Here $\tilde g_2=\chi^4g_2$, $\tilde g_3=\chi^6g_3$, $\xi_0=z_0/\chi$ and $\tilde\mu_j=\mu_j/\chi$.
 The mode constants scale as $\tilde\gamma_j=\chi^2\bar\gamma_j$ and $\tilde\alpha_j=\varsigma\bar\alpha_j/\sqrt[4]{\varsigma}$.
-Supplement~1, Section~\ref{S-app:scaled-params}, also gives the initial-data definitions for the tilde system considered independently.
+Supplement~1, Section~\ref*{S-app:scaled-params}, also gives the initial-data definitions for the tilde system considered independently.
 
-The spectral normalisation, Abel sum condition and Lam\'e equations of the normal-form envelopes are given in Supplement~1, Section~\ref{S-supp:subsec:fwm-ba}.
+The spectral normalisation, Abel sum condition and Lam\'e equations of the normal-form envelopes are given in Supplement~1, Section~\ref*{S-supp:subsec:fwm-ba}.
 The parameter-free equations \eqref{eq:uv-tilde-system}, Hamiltonian \eqref{eq:H-tilde} and meromorphic envelopes \eqref{eq:u-v-tilde} define the FWM normal form.
 The transformation provides a universal meromorphic target system for generic quartic FWM trajectories, with the inverse reconstruction specified in Section~\ref{subsec:transform-domain}.
 
@@ -377,7 +378,7 @@ h(z)=\frac{\lambda_1d_5}{\lambda_1-\rho(z)},\qquad
 \label{eq:local-inverse-normalisation}
 \end{equation}
 Choose the constant roots consistently: set $S=\prod_jc_j/(16\lambda_1^2)$ and $\varsigma=q_1/(2S)=\pm1$.
-This fixes the square root in the definition of $\varsigma$ in Supplement~1, Section~\ref{S-app:bar-coords-params}.
+This fixes the square root in the definition of $\varsigma$ in Supplement~1, Section~\ref*{S-app:bar-coords-params}.
 Use the continuous branch of $\sqrt h$ fixed in Section~\ref{subsec:bar-coords}.
 The inverse normalisation is \eqref{eq:hat-to-bar}; the first gauge is inverted using its stated integrals of the unchanged modal products, and the final rescaling is invertible since $\chi\ne0$.
 The fourth root of $\varsigma$ in that rescaling is also fixed consistently.
@@ -385,7 +386,7 @@ The choice $\lambda_1\ne0$ defines this normalisation chart.
 For a bounded physical oscillation, an admissible root outside the orbit gives a chart along the full path; overlapping root choices provide local reconstructions along other regular segments.
 Zeros of $h$ at $z_0\pm z_1$ account for the common square-root part of the original branch behaviour; the preceding gauge removes the mode-dependent part.
 
-The transported physical conjugation constraint and composite reconstruction multipliers are given in Supplement~1, Section~\ref{S-subsec:transform-domain}.
+The transported physical conjugation constraint and composite reconstruction multipliers are given in Supplement~1, Section~\ref*{S-subsec:transform-domain}.
 For real physical $z$, the transformed trajectory is evaluated along the line $\xi=z/\chi$.
 The inverse gauge, normalisation and rescaling then reconstruct the original physical fields, including their optical powers and phases.
 
@@ -401,7 +402,7 @@ Its asymmetric complex Hamiltonian extension is
 \frac{d}{d z} v_j{\left(z \right)} &= \left({a}_{j} + \sum_{k=1}^{2} {a}_{j,k}\,u_k v_k \right) v_j - \prod\limits_{k=1, k \ne j}^{2} u_k, \label{cc:eq:uv-system}
 \end{align}
 where $a_{1,2}=a_{2,1}$ and the interaction product has one factor, giving linear coupling.
-The physical field map and Hamiltonian are given in Supplement~1, Section~\ref{S-supp:sec:coupler}.
+The physical field map and Hamiltonian are given in Supplement~1, Section~\ref*{S-supp:sec:coupler}.
 For purely imaginary $a_j,a_{j,k}$, the preserved slice $v_1=-u_1^*$, $v_2=u_2^*$ gives $u_1v_1=-|A_1|^2$, $u_2v_2=|A_2|^2$.
 The Hamiltonian and $D=u_1v_1-u_2v_2$ are commuting, generically independent integrals; physically $D$ is minus the total optical power.
 
@@ -413,10 +414,10 @@ As before, the Hamiltonian gives $Q(\rho)=\sum_{l=0}^2b_l\rho^l$, with
 \label{cc:eq:drho-sqrd-3}
 \end{equation}
 Here $d_4=b_2^2$, rather than $b_2^2-4$.
-For $b_2\ne0$ and a nonsingular quartic, choose a simple root $\lambda_1$; the same Weierstrass construction gives the powers and signed-point data recorded in Supplement~1, Section~\ref{S-cc:sec:mode-power}.
+For $b_2\ne0$ and a nonsingular quartic, choose a simple root $\lambda_1$; the same Weierstrass construction gives the powers and signed-point data recorded in Supplement~1, Section~\ref*{S-cc:sec:mode-power}.
 If $b_2=0$, the scalar equation has degree at most two and admits elementary integration.
 
-The envelope reconstruction follows the FWM logarithmic-derivative method; the complete coupler derivation is in Supplement~1, Section~\ref{S-cc:sec:mode-power}.
+The envelope reconstruction follows the FWM logarithmic-derivative method; the complete coupler derivation is in Supplement~1, Section~\ref*{S-cc:sec:mode-power}.
 The sigma-only result needed for the gauge and projection is
 \begin{align}
 u_j{\left(z\right)} &= \frac{\kappa\, \alpha_j\,\sqrt{W_j} \,\sigma{\left(z_1\right)}\sigma{\left(z - 2 z_{0} + {\mu}_{j} \right)} \exp\left(z {r}_{0,j} + \log{\left(\frac{\sigma{\left(z - z_{0} + z_{1} \right)}}{\sigma{\left(z - z_{0} - z_{1} \right)}} \right)} \left({r}_{1,j} - \frac{1}{2}\right)\right)}{ \sigma{\left({\mu}_{j} - z_{0}\right)} \sigma{\left(z - z_{0}  - z_1\right)}}, \notag \\[12pt]
@@ -434,7 +435,7 @@ r_{0,j}&=\Lambda_{0,j}+\Lambda_{1,j}\lambda_1-2r_{1,j}\zeta(z_1)
 \label{cc:eq:envelope-constants}
 \end{align}
 The identity $W_j=\gamma_j-\lambda_1$ follows from the signed-point formulas.
-The sign $\kappa$ records the compatible square-root choice in passing to the sigma-only expression; its explicit formula and initial normalisations are in Supplement~1, Section~\ref{S-cc:sec:mode-power}.
+The sign $\kappa$ records the compatible square-root choice in passing to the sigma-only expression; its explicit formula and initial normalisations are in Supplement~1, Section~\ref*{S-cc:sec:mode-power}.
 Logarithms are continued continuously along the propagation path, with square roots fixed compatibly by initial data.
 The fractional-power exponents satisfy
 \begin{equation}
@@ -446,10 +447,10 @@ r_{1,2}-\frac12=-\frac{a_{1,1}-a_{2,2}}{a_{1,1}+2a_{1,2}+a_{2,2}}.
 Thus unequal self-phase coefficients generically yield branching under complex continuation; unequal propagation constants alone do not.
 This concerns the complexified propagation variable; physical fields remain smooth along a regular real propagation path, with logarithms continued along that path.
 Jensen's symmetric case has $b_1=0$ and $r_{1,j}=1/2$, so the logarithmic factor disappears and the envelopes are meromorphic.
-The coupler Hamiltonian product relation can also be written using the four-point Frobenius--Stickelberger determinant formula, derived in Supplement~1, Section~\ref{S-cc:app:fs-det-ham-proof}.
+The coupler Hamiltonian product relation can also be written using the four-point Frobenius--Stickelberger determinant formula, derived in Supplement~1, Section~\ref*{S-cc:app:fs-det-ham-proof}.
 
 \subsection{Meromorphic gauge of the coupler}
-Use $u_j=\hat u_j e^{-\phi_j}$, $v_j=\hat v_j e^{\phi_j}$, $\phi_1+\phi_2=0$, with the coupler phases in Supplement~1, Section~\ref{S-supp:sec:projection}.
+Use $u_j=\hat u_j e^{-\phi_j}$, $v_j=\hat v_j e^{\phi_j}$, $\phi_1+\phi_2=0$, with the coupler phases in Supplement~1, Section~\ref*{S-supp:sec:projection}.
 This reciprocal gauge preserves modal products and gives the autonomous equations
 \begin{align}
 \frac{\partial}{\partial z} \hat{u}_j &= \left(b_1 - 2 b_2\hat{u}_j \hat{v}_j \right) \frac{\hat{u}_j}{N} + \prod\limits_{k=1, k \ne j}^{N} \hat{v}_k \notag \\
@@ -474,7 +475,7 @@ This relates parametric four-wave mixing to coherent power exchange between wave
 
 We start with the four-wave-mixing normal form \eqref{eq:uv-tilde-system}, whose four FWM mode pairs are $\tilde u_j,\tilde v_j$, $j=1,\ldots,4$.
 Setting $\tilde u_3=\tilde u_4$ and $\tilde v_3=\tilde v_4$ combines the third and fourth pairs into one repeated mode, giving a three-mode degenerate FWM system.
-After the mode and propagation-coordinate rescaling detailed in Supplement~1, Section~\ref{S-supp:sec:projection}, its three FWM mode pairs are denoted by $\bar u_j,\bar v_j$, $j=1,2,3$.
+After the mode and propagation-coordinate rescaling detailed in Supplement~1, Section~\ref*{S-supp:sec:projection}, its three FWM mode pairs are denoted by $\bar u_j,\bar v_j$, $j=1,2,3$.
 The constants $\chi,\varsigma$ are chosen from the coupler data by \eqref{cc:eq:projection-constants}, and the resulting FWM Hamiltonian is
 \begin{align}
 \bar{H} &= \frac{\tilde{H}}{2 \chi^{3}} = - \frac{\varsigma \chi }{4}\left( \bar{u}_1 \bar{u}_2 \bar{u}^{2}_3 + \bar{v}_1 \bar{v}_2 \bar{v}^{2}_3 \right) + \frac{\chi \bar{u}^{2}_1 \bar{v}^{2}_1}{4} + \frac{\chi \bar{u}^{2}_2 \bar{v}^{2}_2}{4} + \frac{\chi \bar{u}^{2}_3 \bar{v}^{2}_3}{8} - \frac{1}{\chi}\sum_{j=1}^{3}\bar{u}_j \bar{v}_j, \label{cc:eq:Hbar-deg-fem}
@@ -534,7 +535,7 @@ For example, differentiating the first ratio gives
 \end{align}
 The second equality uses the matched power differences and \eqref{cc:eq:projection-energy}; the other three ratios give the remaining equations of \eqref{cc:eq:uv-hat-system}.
 The calculation extends across isolated zeros of $\hat u_1$ wherever the original ratio map is regular.
-The expanded algebra and explicit lifted solutions are in Supplement~1, Section~\ref{S-supp:sec:projection}.
+The expanded algebra and explicit lifted solutions are in Supplement~1, Section~\ref*{S-supp:sec:projection}.
 Together, the ratio projection and inverse reciprocal gauge reconstruct the asymmetric-coupler envelopes from the meromorphic degenerate-FWM solutions.
 
 \section{Numerical validation}\label{sec:num-val}
@@ -543,15 +544,15 @@ Logarithms in the reconstruction are continued along the sampled path by phase u
 The principal-branch diagnostic $\phi_j=\log(u_j/v_j)/(2i)$, used in some plots, is distinct from the earlier gauge exponent; physical powers and phases are recovered through the field maps.
 
 \subsection{Physical four-wave mixing}
-Figure~\ref{fig:case2-plot1} compares reconstructed optical powers and phases with direct integration of \eqref{S-eq:fwm-system}.
+Figure~\ref{fig:case2-plot1} compares reconstructed optical powers and phases with direct integration of \externaleqref{S-eq:fwm-system}.
 The illustrative fibre uses input powers $(1,8.5,0.4,0.01)$ W, common effective area $10\,\mu\mathrm m^2$, and dispersion $\beta^{(2)}=-30\,\mathrm{ps}^2/\mathrm{km}$.
 With offsets $(-\Omega,\Omega,-3\Omega,3\Omega)$ and $\Omega=2\pi\times100$ GHz, it has $\Delta k\simeq-9.47\times10^{-2}\,\mathrm m^{-1}$ and spans two exchange periods over $117.5$ m.
 The maximum complex-field discrepancy divided by the maximum sampled field amplitude is approximately $2\times10^{-11}$.
-The complete inputs and field map are in Supplement~1, Sections~\ref{S-app:case2-params} and \ref{S-supp:sec:physical}.
+The complete inputs and field map are in Supplement~1, Sections~\ref*{S-app:case2-params} and \ref*{S-supp:sec:physical}.
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{plots/case2_plot_1.pdf}
-\caption{\textbf{A} Intensity $\mathcal{P}_j=|A_j|^2$, and \textbf{B} phase $\phi_j$ of physical field amplitudes: analytic solution \eqref{eq:u-v-quartic} converted via \eqref{S-eq:u-v-A} (dashed lines) compared with numerical integration (symbols).}
+\caption{\textbf{A} Intensity $\mathcal{P}_j=|A_j|^2$, and \textbf{B} phase $\phi_j$ of physical field amplitudes: analytic solution \eqref{eq:u-v-quartic} converted via \externaleqref{S-eq:u-v-A} (dashed lines) compared with numerical integration (symbols).}
 \label{fig:case2-plot1}
 \end{figure}
 
@@ -563,7 +564,7 @@ To test unequal coefficients on the physical slice, consider the normalised fiel
 \label{cc:eq:asymmetric-physical}
 \end{equation}
 with $\beta_1=0.3$, $\beta_2=-0.2$, $G_{1,1}=1.2$, $G_{2,2}=0.7$, and $G_{1,2}=G_{2,1}=0.25$.
-The fields are mapped as in \eqref{S-cc:eq:uv-to-jensen}, with $a_1=-i\beta_1$, $a_2=i\beta_2$, $a_{j,j}=iG_{j,j}$ and $a_{1,2}=-iG_{1,2}$.
+The fields are mapped as in \externaleqref{S-cc:eq:uv-to-jensen}, with $a_1=-i\beta_1$, $a_2=i\beta_2$, $a_{j,j}=iG_{j,j}$ and $a_{1,2}=-iG_{1,2}$.
 We take $A_1(0)=0.9+0.2i$ and $A_2(0)=0.3-0.1i$.
 Figure~\ref{cc:fig:asymmetric-physical} compares the reconstructed optical powers and relative phase with direct integration of \eqref{cc:eq:asymmetric-physical} over $0\le z\le8$.
 The maximum absolute error in either complex field at the 501 sampled points is $7.7\times10^{-13}$.
@@ -580,10 +581,10 @@ This example tests the generic unequal-self-phase case in a conservative physica
 We also integrate the three-mode degenerate-FWM equations generated by \eqref{cc:eq:Hbar-deg-fem} and, independently, the gauged coupler \eqref{cc:eq:uv-hat-system}, using initial data matched to the asymmetric example in Section~\ref{cc:subsec:asymmetric-physical}.
 Applying the ratio map \eqref{cc:eq:projection-hat-as-bars} to the integrated FWM trajectory gives a maximum absolute discrepancy of $1.6\times10^{-12}$ across all four complex coupler components at 501 points over $0\le z\le8$.
 With looser integration tolerances the discrepancy is $6.2\times10^{-11}$.
-This checks the projection between independently evolved solutions, without evaluating the elliptic formulas; Supplement~1, Section~\ref{S-supp:subsec:projection-numeric}, gives the matching data and tolerances.
+This checks the projection between independently evolved solutions, without evaluating the elliptic formulas; Supplement~1, Section~\ref*{S-supp:subsec:projection-numeric}, gives the matching data and tolerances.
 
 \subsection{Additional checks}
-The general complex FWM example and its figure are retained in Supplement~1, Section~\ref{S-supp:sec:numerics}; its scale-normalised field discrepancy is approximately $2\times10^{-13}$.
+The general complex FWM example and its figure are retained in Supplement~1, Section~\ref*{S-supp:sec:numerics}; its scale-normalised field discrepancy is approximately $2\times10^{-13}$.
 The audits verify the full FWM transformation chain, the nonzero-$\Lambda_{1,j}$ cubic reconstruction for both coupling signs, all eight normal-form envelopes and all six lifted envelopes.
 They also check the full ratio projection, its matched invariants and Hamiltonian, and the gauged Wronskians and Lam\'e potentials.
 

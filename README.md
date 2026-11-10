@@ -6,7 +6,6 @@ Working repository for a combined paper on elliptic complex-envelope solutions, 
 
 - `code/`: copied symbolic notebooks, shared elliptic-function helpers and numerical audits.
 - `josa-b-latex/`: the manuscript, supplement, bibliography databases, publisher template and figure assets; the sole working LaTeX directory.
-- `fwm-paper/` and `coherent-coupler-paper/`: local, Git-ignored source archives. Leave these unchanged.
 
 The manuscript entry point is `josa-b-latex/fwm-and-coupler.tex`, accompanied by `josa-b-latex/supplement.tex`. The paper develops the FWM complex envelopes and their Baker–Akhiezer factors, then applies that analytic structure to the FWM normal form and the coherent-coupler projection. The supplement contains the FS determinant representations, Kronecker/theta formulas, detailed spectral calculations, parameter definitions and additional numerical material. Build both PDFs together so their cross-references resolve.
 

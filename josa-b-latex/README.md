@@ -10,7 +10,7 @@ From the repository root:
 make -C josa-b-latex
 ```
 
-The outputs are `fwm-and-coupler.pdf` and `supplement.pdf`. Keep them together so links between the documents work. The Makefile builds them sequentially, twice, to resolve their mutual references from a clean checkout. Requires `latexmk`, `pdflatex`, BibTeX, biber and the packages loaded by the publisher class. Do not build the two documents concurrently while their auxiliary files are being written.
+The outputs are `fwm-and-coupler.pdf` and `supplement.pdf`. Keep them together so links between the documents work. The Makefile builds them sequentially, twice, to resolve their mutual references from a clean checkout. Requires Python 3, `latexmk`, `pdflatex`, BibTeX, biber and the packages loaded by the publisher class. Do not build the two documents concurrently while their auxiliary files are being written.
 
 ## Manuscript structure
 
@@ -37,3 +37,9 @@ The current build has **16 main-paper pages** (including references) and **33 su
 Additional original figure assets are retained under `plots/coupler/`. See `../code/README.md` for the generation commands. The calculation runners export directly to this directory; all 11 historical notebooks remain unchanged.
 
 Generated manuscript PDFs and auxiliary files are Git-ignored. Template files, manuscript source, bibliography databases and figures are included so this directory builds independently of the archived original papers.
+
+## Cross-document references in submission packages
+
+The documents load `main-paper-references.tex` or `supplement-references.tex` to resolve references to the other document. The generated reference data must accompany a standalone build: submission platforms may discard auxiliary files. For the submission ZIPs in `dist/`, embed the contents of the relevant reference input directly in the packaged manuscript, replacing its input command. This leaves exactly one `.tex` file per ZIP, as required by the platform. The Makefile refreshes them from the latest builds using `export-references.py`. Each separate package builds without the other document or any pre-existing `.aux` files.
+
+Cross-document references are deliberately printed without hyperlinks (`\ref*` and `\externaleqref`), because submission-platform PDF handling can redirect external links to the wrong document. Internal references retain their hyperlinks.
