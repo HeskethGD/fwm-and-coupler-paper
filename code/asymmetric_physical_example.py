@@ -1,5 +1,5 @@
 """Physical conservative coupler example, with unequal self-phase coefficients.
-Run from any directory; writes the figure under latex/plots/coupler in this repository.
+Run from any directory; writes the figure under josa-b-latex/plots/coupler.
 Uses the audited elliptic reconstruction and leaves weierstrass_modified.py intact.
 """
 from pathlib import Path
@@ -63,6 +63,6 @@ for ax,label in zip(axs,['A','B']):
  ax.set_xlim(z[0],z[-1])
  ax.text(.02,1.02,label,transform=ax.transAxes,fontsize=20,fontweight='bold',va='bottom')
 fig.subplots_adjust(left=.075,right=.98,bottom=.17,top=.82,wspace=.28)
-out=Path(__file__).resolve().parents[1]/'latex'/'plots'/'coupler'/'asymmetric_physical.pdf';fig.savefig(out,bbox_inches="tight");plt.close(fig)
+out=Path(__file__).resolve().parents[1]/'josa-b-latex'/'plots'/'coupler'/'asymmetric_physical.pdf';out.parent.mkdir(parents=True,exist_ok=True);fig.savefig(out,bbox_inches="tight");plt.close(fig)
 print(f'Asymmetric physical example: full-field max error {error:.6g}; slice residual {slice_error:.3g}; total-power residual {power_error:.3g}')
 print(out)

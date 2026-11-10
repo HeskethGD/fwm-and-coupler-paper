@@ -24,9 +24,22 @@ All 11 notebooks are exact copies, including their saved outputs, metadata and m
 
 ## Minimal adaptations
 
-The copied mathematical helpers and audit scripts are unchanged. The only Python source adaptation at setup is in `asymmetric_physical_example.py`: its figure destination is now `../latex/plots/coupler/asymmetric_physical.pdf`, resolved relative to the script. No equations or numerical parameters have changed. Its original-copy hash is retained in the manifest as provenance, not as a claim that the adapted script remains identical.
+The mathematical helpers and original notebooks are unchanged. Two scripts adapt figure destinations to the current manuscript directory:
+
+- `asymmetric_physical_example.py` exports to `../josa-b-latex/plots/coupler/asymmetric_physical.pdf`, resolved relative to the script.
+- `audit_numeric_notebook.py --figures` executes the notebook's figure cells with export paths redirected in memory to `../josa-b-latex/plots/`.
+
+These adaptations change output paths only. `source-manifest.json` retains the original-copy hashes as provenance; it is not a claim that the adapted scripts remain byte-identical to their historical copies. The notebooks themselves remain byte-identical.
 
 Run commands from the repository root using `.venv/bin/python`; examples are in the root README. The old audit docstrings mentioning `code/.venv/bin/python` describe their historical environment location.
+
+`projection_numeric_check.py` is a new standalone check. It independently integrates the six-component degenerate-FWM system and the four-component gauged coupler, then compares the projected source fields with the target fields at 501 points over `0 <= z <= 8`. It uses the manuscript's asymmetric physical-coupler initial data, verifies initial invariant matching at 70 digits, and repeats the double-precision integration with tighter tolerances. It prints the matching constants, initial states, errors, invariant drifts and library versions as JSON, without evaluating elliptic envelopes or importing the historical audit scripts.
+
+```sh
+.venv/bin/python code/projection_numeric_check.py
+```
+
+The tight-run maximum absolute difference is approximately `1.6e-12`, compared with `6.2e-11` at looser tolerances. This is a discrepancy between two independently integrated solutions, not a bound on either integration's error. The original mathematical calculations, helpers and notebooks are retained; the path adaptations are listed above.
 
 To regenerate figures without changing notebook files:
 
@@ -35,13 +48,13 @@ MPLCONFIGDIR=/tmp/fwm-coupler-matplotlib .venv/bin/python code/audit_numeric_not
 MPLCONFIGDIR=/tmp/fwm-coupler-matplotlib .venv/bin/python code/asymmetric_physical_example.py
 ```
 
-The FWM runner writes its original filenames to `latex/plots/`. The coupler physical example writes to `latex/plots/coupler/`. Importing `audit_coupler` in the physical-example script also executes its existing checks; that behaviour is inherited unchanged.
+The FWM runner writes its original figure filenames to `josa-b-latex/plots/`. The coupler physical example writes to `josa-b-latex/plots/coupler/`. Importing `audit_coupler` in the physical-example script also executes its existing checks; that behaviour is inherited unchanged.
 
 ## Historical notebook paths
 
 For interactive work, launch notebooks with this directory as the working directory so the local helper imports resolve.
 
-The FWM numerical notebook's active `../latex/plots/` export paths already match the new layout. The coupler numerical notebook retains its original `../paper/plots/` export paths. Those paths do not match the new layout; running its export cells unchanged will fail unless the old destination exists. Preserve the notebook record and use the audited physical-example script for the retained coupler figure. If additional coupler plots are needed later, redirect those export paths in memory in an audit runner rather than rewriting the notebook.
+The FWM notebook retains its historical `../latex/plots/` exports and the coupler notebook retains its historical `../paper/plots/` exports. Those folders are not working destinations. Use the commands above for figure regeneration: the runner redirects FWM export paths in memory, and the physical-example script supplies the retained coupler figure. For direct interactive use, redirect export paths in memory to `../josa-b-latex/plots/` (or its `coupler/` subdirectory) before running export cells. Do not rewrite the stored notebook records to change paths.
 
 The exploratory `Mobius transforms and invariance.ipynb` also retains a historical `numerical_evaluation.weierstrass_modified` import. That package is not provided here; its direct counterpart is the unchanged local `weierstrass_modified.py`. No import shim or notebook edit has been introduced. This exploratory notebook is preserved as calculation history and is not part of the current audited execution path.
 

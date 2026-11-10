@@ -1,0 +1,14 @@
+{
+  "source": "../latex-universal-template (downloaded by the author from Optica Publishing Group)",
+  "template_page": "https://opg.optica.org/content/author/portal/item/templates-default",
+  "files_sha256": {
+    "optica-article.cls": "dd666e10743ef10be8a8223738f66600f61e933dd7495a7f89229bf890d77e6b",
+    "opticajnl.bst": "bc1764bd3c52c441d08a79fa8e064c93c7e5763d64c4f2f70f59a8ef42482173",
+    "opticajnlnt.bst": "576aefe1d731d1b1e75d8dbbc1916a8c3581635a4844c20bd30874832befa2b8",
+    "jabbrv.sty": "2543f83084754caf4148c118be29969361e61d34f00b0f6c4d8ef2e53ddead9b",
+    "jabbrv-ltwa-en.ldf": "2e11c4037212a41e3b7ce7ec6aa7ed98fd2d3905488d45f2939b723d270eaa96",
+    "jabbrv-ltwa-all.ldf": "14c911f17b60d9116b1f7e0463707b2e52a1e869cf82c02dfb06c79544031402",
+    "styles/opticajournal.sty": "5addadcff99923329f8c5ab3c1841c1b0fd8bb49dc6f6753a49e6ad01af7d595"
+  },
+  "publisher_files_modified": false
+}

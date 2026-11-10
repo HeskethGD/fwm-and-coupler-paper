@@ -1,8 +1,8 @@
 """Run existing numerical notebook examples without plotting or changing outputs.
 
-Run: MPLCONFIGDIR=/tmp/fwm-matplotlib code/.venv/bin/python code/audit_numeric_notebook.py
+Run: MPLCONFIGDIR=/tmp/fwm-matplotlib .venv/bin/python code/audit_numeric_notebook.py
 Executes the existing 500/1000/1000-point grids and DOP853 integrations.
-Add --figures to regenerate the two manuscript plot PDFs.
+Add --figures to regenerate the two manuscript plot PDFs in josa-b-latex/plots.
 """
 import json
 import os
@@ -16,6 +16,15 @@ os.environ.setdefault('MPLBACKEND','Agg')
 sys.path.insert(0,str(code_dir))
 nb=json.loads((code_dir/'Numeric plots for four-wave mixing.ipynb').read_text())
 ns={'__name__':'__audit__'}
+
+def execute_plot_cell(index):
+    # Redirect historical exports in memory; preserve the notebook byte-for-byte.
+    source=''.join(nb['cells'][index]['source'])
+    assert '../latex/plots/' in source, f'Unexpected export path in cell {index}'
+    source=source.replace('../latex/plots/', '../josa-b-latex/plots/')
+    (code_dir.parent/'josa-b-latex'/'plots').mkdir(parents=True,exist_ok=True)
+    exec(compile(source,f'plot-cell-{index}','exec'),ns)
+
 selected=[1,2,*range(4,23),24,*range(26,35),*range(40,44),*range(46,55),*range(61,71)]
 for i in selected:
     src='\n'.join(line for line in ''.join(nb['cells'][i]['source']).splitlines()
@@ -32,7 +41,7 @@ for i in selected:
         assert err/scale<1e-9,err/scale
         print('CASE 1: all eight complex envelopes, max absolute discrepancy',err,flush=True)
         if '--figures' in sys.argv:
-            exec(compile(''.join(nb['cells'][37]['source']),'plot-cell-37','exec'),ns)
+            execute_plot_cell(37)
     if i==54:
         ana=np.array(ns['case2_As_ana']+ns['case2_Acs_ana'])
         num=ns['case2_A_solution'].y
@@ -50,7 +59,7 @@ for i in selected:
         assert err<1e-9,err
         print('CASE 2: physical fields, max discrepancy / max field amplitude',err,flush=True)
         if '--figures' in sys.argv:
-            exec(compile(''.join(nb['cells'][56]['source']),'plot-cell-56','exec'),ns)
+            execute_plot_cell(56)
     if i==70:
         # Reconstruct the four independent physical fields from the cubic case.
         vals=ns['case3_kron_sol_mpmath']

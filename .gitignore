@@ -219,15 +219,17 @@ planning/
 coherent-coupler-paper/
 fwm-paper/
 
-# Combined manuscript build products
-/latex/*.aux
-/latex/*.bbl
-/latex/*.bcf
-/latex/*.blg
-/latex/*.fdb_latexmk
-/latex/*.fls
-/latex/*.out
-/latex/*.run.xml
-/latex/*.synctex.gz
-/latex/*.toc
-/latex/combined-paper.pdf
+# Manuscript build products
+/josa-b-latex/*.aux
+/josa-b-latex/*.bbl
+/josa-b-latex/*.bcf
+/josa-b-latex/*.blg
+/josa-b-latex/*.fdb_latexmk
+/josa-b-latex/*.fls
+/josa-b-latex/*.log
+/josa-b-latex/*.out
+/josa-b-latex/*.run.xml
+/josa-b-latex/*.synctex.gz
+/josa-b-latex/*.toc
+/josa-b-latex/fwm-and-coupler.pdf
+/josa-b-latex/supplement.pdf
